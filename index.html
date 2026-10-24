@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Китай: путеводитель по местам</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#150c2b;--fg:#f6f1ff;--muted:#bdb0da;--card:rgba(30,17,60,.72);--line:rgba(247,233,168,.2);
+  --red:#ff7a99;--orange:#ffb454;--yellow:#f7e9a8;--green:#7ee0b0;--cyan:#6fd6f0;--blue:#8aa4ff;--purple:#c08bff;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:transparent;color:var(--fg);font:16px/1.5 system-ui,"Segoe UI",Roboto,sans-serif;overflow-x:hidden}
+html{background:#150c2b}
+body::before{content:"";position:fixed;inset:-25%;z-index:-1;pointer-events:none;background:radial-gradient(45% 40% at 20% 15%,rgba(247,233,168,.2),transparent 70%),radial-gradient(40% 40% at 85% 45%,rgba(160,100,230,.38),transparent 70%),radial-gradient(45% 35% at 35% 90%,rgba(247,233,168,.13),transparent 70%),linear-gradient(160deg,#1a0f36,#2a1553 50%,#1b0f3a);will-change:transform;animation:shimmer 28s ease-in-out infinite alternate}
+@keyframes shimmer{to{transform:rotate(14deg) scale(1.12)}}
+@media (prefers-reduced-motion:reduce){body::before{animation:none}}
+a{color:inherit}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:calc(14px + env(safe-area-inset-top,0px)) 20px 14px;background:rgba(21,12,43,.92);border-bottom:1px solid var(--line)}
+.logo{font:800 1rem var(--display);text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:20px 0 0 var(--yellow),-0px 0 0 var(--red)}
+.logo span{margin-left:20px}
+.links{display:flex;gap:20px;font:400 13px var(--mono)}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--fg)}
+.hero{position:relative;min-height:80vh;min-height:80svh;display:flex;align-items:center;padding:110px 20px 60px;overflow:hidden}
+#grid{position:absolute;inset:0;width:100%;height:100%;z-index:1;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.bg-zh{position:absolute;right:-2vw;bottom:-5vw;z-index:0;font:900 clamp(10rem,46vw,34rem)/1 "Noto Serif SC","Songti SC",SimSun,serif;color:transparent;-webkit-text-stroke:1.5px var(--line);user-select:none;pointer-events:none}
+.shape{position:absolute;pointer-events:none;z-index:1}
+.s1{width:90px;height:90px;border:8px solid var(--red);border-radius:50%;top:20%;right:12%}
+.s2{width:64px;height:64px;background:var(--blue);border-radius:14px;bottom:14%;left:7%}
+.s3{border-left:34px solid transparent;border-right:34px solid transparent;border-bottom:60px solid var(--yellow);top:34%;left:13%}
+.s4{width:120px;height:32px;border-radius:99px;background:var(--green);bottom:20%;right:18%}
+.hero-in{position:relative;z-index:2;max-width:1180px;width:100%;margin:0 auto;pointer-events:none}
+h1{margin:0 0 22px;font:800 clamp(3rem,15vw,10rem)/1 var(--display);letter-spacing:-.03em;display:flex}
+.w{display:inline-block;overflow:hidden;padding:.04em .02em;pointer-events:auto}
+.l{display:inline-block;background:linear-gradient(180deg,#fff6c9 20%,#c9a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.js .l{transform:translateY(110%)}
+.js .lead{opacity:0}
+.lead{max-width:34rem;margin:0 0 28px;font-size:1.15rem;color:var(--muted)}
+.contact{display:inline-flex;align-items:center;min-height:40px;padding:0 20px;border-radius:99px;background:var(--yellow);color:#241243;font:600 14px var(--mono);text-decoration:none;transition:transform .2s}
+.contact:hover{transform:scale(1.05)}
+section{max-width:1180px;margin:0 auto;padding:90px 20px}
+h2{margin:0 0 28px;font:800 clamp(1.8rem,5vw,3.1rem)/1.1 var(--display);letter-spacing:-.02em;max-width:18ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.chip{min-height:40px;font:400 13px var(--mono);border:1px solid var(--line);background:transparent;color:var(--fg);padding:8px 16px;border-radius:99px;cursor:pointer}
+.chip.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.chip:focus-visible,.contact:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+#cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{position:relative;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;overflow:hidden;transition:border-color .25s}
+.card[hidden]{display:none}
+.card::before{content:"";z-index:2;position:absolute;left:0;top:0;width:100%;height:4px;background:var(--c);transform:scaleX(.15);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.card:hover{border-color:var(--c)}
+.card:hover::before{transform:scaleX(1)}
+.pic{position:relative;height:160px;margin:-24px -24px 18px;overflow:hidden;background:#2b1458}
+.pic svg{display:block;width:100%;height:100%}
+@media (hover:hover){.pic svg{transition:transform .8s cubic-bezier(.2,.8,.2,1)}.card:hover .pic svg{transform:scale(1.07)}}
+.tag{position:absolute;top:12px;right:12px;font:600 12px var(--mono);color:var(--c);background:rgba(21,12,43,.7);border:1px solid var(--c);border-radius:99px;padding:2px 10px}
+h3{margin:0;font:800 1.2rem/1.2 var(--display)}
+.loc{margin:4px 0 10px;font:400 12px var(--mono);color:var(--muted)}
+.tip{margin:0 0 16px;color:var(--muted);font-size:.95rem}
+dl{margin:auto 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;border-top:1px dashed var(--line);padding-top:12px}
+dt{font:400 11px var(--mono);color:var(--muted)}
+dd{margin:2px 0 0;font:600 12px var(--mono)}
+.route{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px;align-items:center}
+.map{border:1px solid var(--line);border-radius:26px;background:radial-gradient(var(--line) 1.5px,transparent 1.5px) 0 0/26px 26px;padding:10px}
+.map svg{display:block;width:100%;height:auto}
+.cn{fill:rgba(130,85,200,.3);stroke:var(--yellow);stroke-opacity:.85;stroke-width:1.6;stroke-linejoin:round}
+.city circle{stroke:#1a0f35;stroke-width:3;transform-box:fill-box;transform-origin:center}
+.js .city circle{transform:scale(0)}
+.map text{font:600 17px var(--mono);fill:var(--fg);paint-order:stroke;stroke:#1a0f35;stroke-width:5px;stroke-linejoin:round}
+.js #rt,.js #rg{stroke-dasharray:2000;stroke-dashoffset:2000}
+.js .map text,.js #runner{opacity:0}
+.legs{list-style:none;margin:0;padding:0;display:grid;gap:18px}
+.leg{display:grid;grid-template-columns:18px 1fr;gap:4px 14px;align-items:center}
+.js .leg{opacity:0}
+.leg i{width:14px;height:14px;border-radius:50%}
+.leg b{font:800 1.05rem var(--display)}
+.leg span{grid-column:2;font:400 13px var(--mono);color:var(--muted)}
+footer{max-width:1180px;margin:0 auto;padding:30px 20px 50px;border-top:1px solid var(--line);font:400 13px/1.6 var(--mono);color:var(--muted)}
+@media (max-width:820px){.route{grid-template-columns:1fr}.links{gap:14px}.s2,.s4{display:none}}
+@media (max-width:560px){.links{display:none}section{padding:64px 16px}nav{padding-left:16px;padding-right:16px}.hero{padding:100px 16px 50px}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="#top"><i></i><span>中国</span></a>
+  <div class="links"><a href="#places">Места</a><a href="#route">Маршрут</a></div>
+  <a class="contact" href="https://t.me/illasoul" target="_blank" rel="noopener">Связь</a>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bg-zh" aria-hidden="true">中国</div>
+  <canvas id="grid" aria-hidden="true"></canvas>
+  <div class="shape s1"></div><div class="shape s2"></div><div class="shape s3"></div><div class="shape s4"></div>
+  <div class="hero-in">
+    <h1 id="title" aria-label="Китай"><span class="w"><span class="l">К</span></span><span class="w"><span class="l">и</span></span><span class="w"><span class="l">т</span></span><span class="w"><span class="l">а</span></span><span class="w"><span class="l">й</span></span></h1>
+    <p class="lead">Стена на сотни километров, горы из кино, неоновый Шанхай и панды на завтрак. Нажимай на точки: они живые.</p>
+  </div>
+</header>
+
+<section id="places">
+  <h2>Куда поехать</h2>
+  <div class="chips" role="group" aria-label="Фильтр по региону">
+    <button class="chip on" data-f="all">Все</button><button class="chip" data-f="Север">Север</button><button class="chip" data-f="Восток">Восток</button><button class="chip" data-f="Центр">Центр</button><button class="chip" data-f="Юг">Юг</button><button class="chip" data-f="Запад">Запад</button>
+  </div>
+  <div id="cards"></div>
+</section>
+
+<section id="route">
+  <h2>Маршрут на 14 дней</h2>
+  <div class="route">
+    <div class="map">
+      <svg id="map" viewBox="0 0 620 440" role="img" aria-label="Схема маршрута: Пекин, Сиань, Чэнду, Гуйлинь, Шанхай">
+        <path class="cn" d="M143 58 170 73 200 108 234 134 288 138 320 149 340 140 374 136 390 121 410 106 437 90 445 74 444 53 463 44 471 26 486 8 505 6 525 10 545 46 570 61 595 76 617 68 610 86 601 106 588 112 580 132 576 139 567 139 551 151 535 168 514 168 503 172 485 182 483 173 492 162 480 158 466 169 450 178 447 181 459 198 477 194 495 199 475 216 463 227 473 240 480 257 489 266 489 278 480 286 490 289 485 307 472 326 465 344 452 355 438 370 418 376 405 383 390 388 375 394 374 405 368 391 352 390 337 384 323 368 310 374 295 376 281 390 271 388 262 383 250 360 246 348 257 336 256 318 244 308 230 296 215 305 195 314 186 314 174 308 160 310 151 313 130 313 110 305 83 286 70 277 60 258 57 240 60 224 48 222 30 216 20 204 16 188 7 178 6 174 20 163 35 163 50 156 70 142 73 132 75 110 95 106 93 84 125 84Z"/>
+        <path class="cn" d="M357 413 367 409 377 409 380 413 375 422 365 430 357 425Z"/>
+        <path id="rg" d="M434 169Q380 190 359 236Q320 245 311 280Q325 330 373 344Q460 350 485 274" fill="none" stroke="var(--yellow)" stroke-opacity=".18" stroke-width="14" stroke-linecap="round"/>
+        <path id="rt" d="M434 169Q380 190 359 236Q320 245 311 280Q325 330 373 344Q460 350 485 274" fill="none" stroke="var(--yellow)" stroke-width="5" stroke-linecap="round"/>
+        <g class="city"><circle cx="434" cy="169" r="11" fill="var(--red)"/><text x="451" y="175">Пекин</text></g>
+        <g class="city"><circle cx="359" cy="236" r="11" fill="var(--orange)"/><text x="376" y="242">Сиань</text></g>
+        <g class="city"><circle cx="311" cy="280" r="11" fill="var(--yellow)"/><text x="294" y="286" text-anchor="end">Чэнду</text></g>
+        <g class="city"><circle cx="373" cy="344" r="11" fill="var(--cyan)"/><text x="373" y="374" text-anchor="middle">Гуйлинь</text></g>
+        <g class="city"><circle cx="485" cy="274" r="11" fill="var(--blue)"/><text x="502" y="280">Шанхай</text></g>
+        <circle id="runner" r="7" fill="var(--fg)"><animateMotion id="mv" dur="12s" begin="indefinite" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;0" keyTimes="0;.5;1"><mpath href="#rt"/></animateMotion></circle>
+      </svg>
+    </div>
+    <ol class="legs">
+      <li class="leg"><i style="background:var(--red)"></i><b>Пекин, 3 дня</b><span>Великая стена, Запретный город</span></li>
+      <li class="leg"><i style="background:var(--orange)"></i><b>Сиань, 2 дня</b><span>Терракотовая армия. Поезд из Пекина примерно 4–5 часов</span></li>
+      <li class="leg"><i style="background:var(--yellow)"></i><b>Чэнду, 3 дня</b><span>Панды и хого. Поезд из Сианя примерно 3,5–4 часа</span></li>
+      <li class="leg"><i style="background:var(--cyan)"></i><b>Гуйлинь, 3 дня</b><span>Река Ли и Яншо. Самолёт из Чэнду около 2 часов</span></li>
+      <li class="leg"><i style="background:var(--blue)"></i><b>Шанхай, 3 дня</b><span>Бунд и Пудун. Самолёт из Гуйлиня около 2 часов</span></li>
+    </ol>
+  </div>
+</section>
+
+<footer>Время в пути приблизительное. Перед поездкой проверь актуальные визовые правила и цены на билеты.</footer>
+
+<script>
+(function(){
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const P=[
+{n:'Великая стена',c:'Пекин, участок Мутяньюй',r:'Север',col:'red',g:'wall',s:'апр–май, сен–окт',d:'1 день',t:'Мутяньюй тише Бадалина. Приезжай к открытию, до экскурсионных автобусов.'},
+{n:'Запретный город',c:'Пекин, музей Гугун',r:'Север',col:'orange',g:'palace',s:'апр–май, сен–окт',d:'1 день',t:'Билеты берут заранее онлайн по паспорту. По понедельникам музей обычно закрыт.'},
+{n:'Терракотовая армия',c:'Сиань, уезд Линьтун',r:'Центр',col:'yellow',g:'army',s:'апр–май, сен–окт',d:'1–2 дня',t:'Добавь к визиту велопрогулку по городской стене Сианя и мусульманский квартал.'},
+{n:'Бунд и Пудун',c:'Шанхай',r:'Восток',col:'blue',g:'bund',s:'март–май, окт–нояб',d:'2–3 дня',t:'Закат на набережной Бунд, а потом вид на небоскрёбы Пудуна с воды.'},
+{n:'Чжанцзяцзе',c:'провинция Хунань',r:'Центр',col:'purple',g:'pillars',s:'апр–окт',d:'3 дня',t:'Каменные колонны, которые считают прообразом гор из «Аватара». Есть лифт Байлун и стеклянный мост.'},
+{n:'Гуйлинь и река Ли',c:'Гуанси',r:'Юг',col:'cyan',g:'hills',s:'апр–окт',d:'3 дня',t:'Карстовые холмы, бамбуковые плоты и рисовые террасы Лунцзи неподалёку.'},
+{n:'Чэнду и панды',c:'Сычуань',r:'Запад',col:'orange',g:'panda',s:'март–июнь, сен–нояб',d:'3 дня',t:'На базу разведения панд лучше ехать утром, к кормлению. Вечером идти на хого.'},
+{n:'Лхаса и Потала',c:'Тибет',r:'Запад',col:'red',g:'potala',s:'апр–окт',d:'4–5 дней',t:'Высота около 3 650 м, на акклиматизацию нужно два дня. Для иностранцев нужен пермит и тур.'}
+];
+const GL={
+wall:'<path d="M4 52V34h8v-8h8v8h8v-8h8v8h8v-8h8v8h4v18z"/>',
+palace:'<path d="M6 28L32 12l26 16M14 28v22M50 28v22M6 50h52M24 50V36h16v14"/>',
+army:'<path stroke-width="9" d="M16 16h.01M32 16h.01M48 16h.01M16 32h.01M32 32h.01M48 32h.01M16 48h.01M32 48h.01M48 48h.01"/>',
+bund:'<path d="M6 54V32h10v22M20 54V12h10v42M34 54V24h9v30M47 54V38h11v16M4 54h56"/>',
+pillars:'<path d="M10 54V30l4-6h6l4 6v24M26 54V14l4-4h4l4 4v40M42 54V26l3-4h6l3 4v28"/>',
+hills:'<path d="M4 42q10-26 20 0q8-18 16 0q8-14 20 0M4 54q8-6 14 0t14 0 14 0 14 0"/>',
+panda:'<path d="M14 36a18 18 0 1036 0a18 18 0 10-36 0"/><path stroke-width="12" d="M17 15h.01M47 15h.01"/><path stroke-width="7" d="M25 34h.01M39 34h.01"/>',
+potala:'<path d="M6 56h52M12 56V44h40v12M18 44V32h28v12M24 32V20h16v12M32 20V8"/>'
+};
+function scene(p,i){let s=i*977+13;const R=()=>(s=s*16807%2147483647)/2147483647;const ridge=(b,a,f,o)=>{let d='M0 180';for(let x=0;x<=320;x+=20)d+='L'+x+' '+(b-R()*a).toFixed(0);return `<path d="${d}L320 180Z" fill="${f}" opacity="${o}"/>`;};const sx=(60+R()*200).toFixed(0);return `<svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sk${i}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b1458"/><stop offset=".55" stop-color="#7a4aa8"/><stop offset="1" stop-color="#f7e9a8"/></linearGradient></defs><rect width="320" height="180" fill="url(#sk${i})"/><circle cx="${sx}" cy="78" r="22" fill="#fff6c9" opacity=".9"/>${ridge(125,50,'#5d3a8e',.65)}${ridge(142,45,'#3c2270',.9)}<g transform="translate(112 50) scale(1.5)" fill="none" stroke="#f7e9a8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">${GL[p.g]}</g>${ridge(168,28,'#1c0f3d',1)}</svg>`;}
+$('#cards').innerHTML=P.map((p,i)=>`<article class="card" data-r="${p.r}" style="--c:var(--${p.col})"><div class="pic" aria-hidden="true">${scene(p,i)}<span class="tag">${p.r}</span></div><h3>${p.n}</h3><p class="loc">${p.c}</p><p class="tip">${p.t}</p><dl><div><dt>сезон</dt><dd>${p.s}</dd></div><div><dt>на месте</dt><dd>${p.d}</dd></div></dl></article>`).join('');
+
+if(!Element.prototype.animate){document.documentElement.classList.remove('js');return;}
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const NAMES=['red','orange','yellow','green','cyan','blue','purple'];
+const rs=getComputedStyle(document.documentElement);
+const COL=NAMES.map(n=>rs.getPropertyValue('--'+n).trim());
+const OUT='cubic-bezier(.16,1,.3,1)',BACK='cubic-bezier(.34,1.4,.64,1)';
+
+/* Точки главного экрана: один canvas вместо сотен элементов, рисуется только пока что-то движется */
+const cv=$('#grid'),cx=cv.getContext('2d');
+let W,H,dpr,cols,rows,cw,ch,rip=[],raf=0,vis=true,t0=RM?-1e5:performance.now(),lw=innerWidth;
+function size(){dpr=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*dpr;cv.height=H*dpr;cols=Math.max(8,Math.round(W/46));rows=Math.max(6,Math.round(H/46));cw=W/cols;ch=H/rows;}
+const bump=t=>(1-Math.cos(Math.PI*t))/2;
+function draw(now){
+  cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,W,H);
+  const ic=(cols-1)/2,ir=(rows-1)/2;let busy=rip.length>0;
+  for(let r=0;r<rows;r++)for(let c=0;c<cols;c++){
+    let s=1,a=.2;
+    const li=now-t0-Math.hypot(c-ic,r-ir)*25;
+    if(li<900){busy=true;if(li<=0)continue;const p=li/900-1;s=1+2.70158*p*p*p+1.70158*p*p;}
+    for(const q of rip){
+      const l=now-q.t-Math.hypot(c-q.c,r-q.r)*40;
+      if(l>0&&l<960){const e=l<260?bump(l/260):bump(1-(l-260)/700);s*=1+1.4*e;a=Math.max(a,.2+.8*e);}
+    }
+    cx.globalAlpha=a;cx.fillStyle=COL[(c+r)%7];cx.beginPath();cx.arc((c+.5)*cw,(r+.5)*ch,4*s,0,6.2832);cx.fill();
+  }
+  rip=rip.filter(q=>now-q.t<3000);
+  raf=busy&&vis?requestAnimationFrame(draw):0;
+}
+const kick=()=>{if(!raf)raf=requestAnimationFrame(draw);};
+const ripple=(c,r)=>{rip.push({t:performance.now(),c:c,r:r});if(rip.length>5)rip.shift();kick();};
+size();kick();
+cv.addEventListener('pointerdown',e=>{const b=cv.getBoundingClientRect();ripple(Math.min(cols-1,Math.max(0,Math.floor((e.clientX-b.left)/cw))),Math.min(rows-1,Math.max(0,Math.floor((e.clientY-b.top)/ch))));});
+addEventListener('resize',()=>{if(innerWidth!==lw){lw=innerWidth;size();kick();}});
+setTimeout(()=>ripple(Math.floor(cols/2),Math.floor(rows/2)),1500);
+if(!RM)setInterval(()=>{if(vis&&!document.hidden)ripple(Math.floor(Math.random()*cols),Math.floor(Math.random()*rows));},4500);
+
+/* Фигуры и точки останавливаются, когда главный экран не виден */
+const loops=RM?[]:$$('.shape').map(s=>{const r=a=>(Math.random()*2-1)*a;return s.animate([{transform:'none'},{transform:'translate('+r(24)+'px,'+r(36)+'px) rotate('+r(120)+'deg)'}],{duration:2600+Math.random()*2000,direction:'alternate',iterations:Infinity,easing:'ease-in-out'});});
+new IntersectionObserver(es=>{vis=es[0].isIntersecting;loops.forEach(a=>vis?a.play():a.pause());if(vis)kick();}).observe($('.hero'));
+
+/* Заголовок */
+$$('#title .l').forEach((l,i)=>{
+  l.animate([{transform:'translateY(110%) rotate(14deg)'},{transform:'translateY(0) rotate(0deg)'}],{duration:1000,delay:350+i*90,easing:OUT,fill:'both'});
+  l.addEventListener('pointerenter',()=>l.animate([{transform:'none'},{transform:'translateY(-12%) rotate(-8deg)',offset:.25},{transform:'none'}],{duration:660,easing:'ease-out'}));
+});
+$('.lead').animate([{opacity:0},{opacity:1}],{duration:800,delay:1000,easing:'ease-out',fill:'both'});
+
+/* Фильтр карточек */
+$$('.chip').forEach(b=>b.addEventListener('click',()=>{
+  $$('.chip').forEach(x=>x.classList.toggle('on',x===b));
+  const f=b.dataset.f;
+  $$('.card').forEach(c=>{c.hidden=!(f==='all'||c.dataset.r===f);});
+  if(!RM)$$('.card:not([hidden])').forEach((c,i)=>c.animate([{opacity:0,transform:'translateY(30px) scale(.92)'},{opacity:1,transform:'none'}],{duration:600,delay:i*50,easing:BACK,fill:'backwards'}));
+}));
+
+/* Маршрут: запускается один раз, бегунок на SMIL и ставится на паузу вне экрана */
+const mp=$('#map'),rt=$('#rt'),rg=$('#rg');let started=false;
+function playRoute(){
+  const L=rt.getTotalLength();
+  [rt,rg].forEach(p=>{p.style.strokeDasharray=L;p.animate([{strokeDashoffset:L},{strokeDashoffset:0}],{duration:3600,easing:'ease-in-out',fill:'both'});});
+  $$('.city').forEach((g,i)=>{
+    g.querySelector('circle').animate([{transform:'scale(0)'},{transform:'scale(1)'}],{duration:600,delay:i*900,easing:BACK,fill:'both'});
+    g.querySelector('text').animate([{opacity:0},{opacity:1}],{duration:500,delay:i*900+200,fill:'both'});
+  });
+  $$('.leg').forEach((l,i)=>l.animate([{opacity:0,transform:'translateX(-20px)'},{opacity:1,transform:'none'}],{duration:600,delay:i*450,easing:OUT,fill:'both'}));
+  if(!RM)setTimeout(()=>{$('#runner').style.opacity=1;$('#mv').beginElement();},3800);
+}
+new IntersectionObserver(es=>{const on=es[0].isIntersecting;if(on&&!started){started=true;playRoute();}if(started)on?mp.unpauseAnimations():mp.pauseAnimations();},{threshold:.35}).observe(mp);
+})();
+</script>
+</body>
+</html>
